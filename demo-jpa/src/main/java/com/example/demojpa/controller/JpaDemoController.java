@@ -31,8 +31,8 @@ public class JpaDemoController {
         userDao.deleteById(userId);
     }
 
-    @RequestMapping("/jpa-demo/{id}")
-    public User findById(@PathVariable(name = "userId") Integer userId){
+    @RequestMapping("/jpa-demo/user/{id}")
+    public User findById(@PathVariable(name = "id") Integer userId){
         return userDao.findById(userId).get();
     }
 
